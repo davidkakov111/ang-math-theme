@@ -1,9 +1,18 @@
-<mat-toolbar color="primary">
-  <span>Application Title</span>
-  <span class="example-fill-remaining-space"></span>
-  <span>Right Aligned Text</span>
+<mat-toolbar>
+  <span>Ang-Mat-Colors</span>
+  <div class="divider"></div>
+  <mat-slide-toggle (change)="toggleTheme()" [checked]="isDarkTheme">
+    Dark Mode
+  </mat-slide-toggle>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-button>LogIn</button>
+    <button mat-button>LogOut</button>
+  </mat-menu>
 </mat-toolbar>
-
+<br>
 <section>
   <div class="example-label">Basic</div>
   <div class="example-button-row">
@@ -115,4 +124,3 @@
   </div>
 </section>
 
-<router-outlet />
